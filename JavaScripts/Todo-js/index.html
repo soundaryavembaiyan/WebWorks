@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-JS</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1 style="color: yellow;">TODOS</h1>
+        <form id="new-task-form">
+            <input type="text" name="new-task-input" id="new-task-input" placeholder="Enter your Todo's" />
+
+            <button type="submit" id="new-task-submit" value="Add task">
+                <i class="fa fa-plus-circle" style="font-size:60px;" aria-hidden="true"></i>
+            </button>
+        </form>
+    </header>
+    <main>
+        <section class="task-list">
+            <h2 style="color: whitesmoke;"><u>Todo Tasks</u></h2>
+
+            <div id="tasks">
+
+                <!-- <div class="task">
+					<div class="content">
+						<input 
+							type="text" 
+							class="text" 
+							value="A new task"
+							readonly>
+					</div>
+					<div class="actions">
+						<button class="edit">Edit</button>
+						<button class="delete">Delete</button>
+					</div>
+				</div> -->
+
+                <!--
+                    edit:   <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    delete: <i class="fa fa-trash" aria-hidden="true"></i>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
