@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Demos</title>
+</head>
+
+<style>
+  .buttonbutton {
+  background-color: #4CAF50; 
+  border:#5b5c5d;
+  color: white;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: yellow;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;} 
+  
+.button2 {
+  background-color: #929394;
+  padding: 15px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+
+  #demoSort{
+    font-size: 20px;
+    font-weight: bold;
+  }
+</style>
+<body>
+<h1 class="text-center">JavaScript</h1>
+<h2>Click me</h2>
+
+<p id="demo">Click here.</p>
+
+<button class="buttonbutton" type="button" onclick="myFunction()">Click me</button>
+
+<script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Welcome to the Technical world.";
+  }
+</script>
+
+<h1>JavaScript changes the value of the src attribute of an image.</h1>
+
+<button class="button1" onclick="document.getElementById('myImage').src='bulbon.png'">Turn on the light</button>
+<img id="myImage" src="bulboff.png" style="width:100px; height: 100px;">
+<button class="button2" onclick="document.getElementById('myImage').src='bulboff.png'">Turn off the light</button>
+
+<br><br>
+<h2>Additions using write():</h2>
+<button class="buttonbutton" type="button" onclick="document.write(11 + 6)">Addition</button>
+
+<br><br>
+<h2>Variable assigning & adding:</h2>
+  <p id="varr"></p>
+  <script>
+    let x, y, z;  
+    x = 15;        
+    y = 60;        
+    z = x + y;   
+   document.getElementById("varr").innerHTML =
+    "x=15 + y=60 -:z=x+y <br>--The value of z is " + z + ".";  
+  </script>
+
+
+<h2>GLOBAL AND BLOCK SCOPE Variable</h2>
+<p id="demo1"></p>
+<script>
+// THIS A GLOBAL AND BLOCK SCOPE {}
+//let and const cannot execute the block, var executes..
+var  x1 = 10; // Here x1 is 10
+{  
+var x1 = 2;   // Here x1 is 2 
+}
+
+// Here x1 is 2
+document.getElementById("demo1").innerHTML = x1;
+</script>
+
+<h2>Array declaring, Change element, Add element</h2>
+<p id="demoCar"></p>
+<script>
+// Create an Array:
+const cars = ["Amaze", "Indica", "BMW"];
+
+// Change an element:
+cars[0] = "Tavera";
+
+// Add an element:
+cars.push("Audi");
+
+// Display the Array:
+document.getElementById("demoCar").innerHTML = cars; 
+</script>
+
+
+<h2>Objects for a person and Adding a new property</h2>
+<p id="person"></p>
+<script>
+const person = {
+  firstName : "John",
+  lastName  : "Doe",
+  gender  : "boy"
+};
+
+person.age = "23";
+
+document.getElementById("person").innerHTML =
+person.firstName + " is " + person.age + " years old." + "<br> The typeof 23 is "+ typeof 23;;
+
+</script>
+
+<h2>Objects for a person Function</h2>
+<p id="per"></p>
+<script>
+  // Create an object:
+  const person1 = {
+    firstName: "John",
+    lastName: "Deep",
+    id: 5566,
+    fullName: function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
+  
+  // Display data from the object:
+  document.getElementById("per").innerHTML = person1.fullName();
+  </script>
+
+
+<h2>JavaScript Strings & Objects</h2>
+<p id="demoOb"></p>
+<script>
+// x is a string
+let xx = "John";
+// y is an object
+let yy = new String("John");
+
+document.getElementById("demoOb").innerHTML =
+typeof xx + "<br>" + typeof yy;
+</script>
+
+<h2>JavaScript String Methods</h2>
+<p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="demostr">Please visit Microsoft and & Microsoft, Microsoft!</p>
+
+<script>
+function myFunction1() {
+  let text = document.getElementById("demostr").innerHTML; 
+  document.getElementById("demostr").innerHTML =
+  text.replace(/Microsoft/g,"W3Schools");
+}
+
+
+</script>
+<h1>JavaScript Template Literals and Interpolations($)</h1>
+<p id="demoInt"></p>
+<script>
+let firstName = "John";
+let lastName = "Deepzar";
+
+let fullName = `Welcome ${firstName} ${lastName}!`;
+document.getElementById("demoInt").innerHTML = fullName;
+</script>
+
+<h2>JavaScript Arrays</h2>
+<p>The array is using a standard for loop:</p>
+<p id="Fruitdemo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Strawberry", "Kiwi"];
+let fLen = fruits.length;
+
+let textF = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  textF += "<li>" + fruits[i] + "</li>";
+}
+textF += "</ul>";
+document.getElementById("Fruitdemo").innerHTML = textF;
+</script>
+
+
+<h2>JavaScript Array Sortings</h2>
+<p>Click the buttons to sort the array alphabetically or numerically.</p>
+
+<button class="button1" onclick="myFunction1()">Sort Alphabetically</button>
+<button class="button1" onclick="myFunction2()">Sort Numerically</button>
+
+<p  id="demoSort"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demoSort").innerHTML = points;  
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demoSort").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demoSort").innerHTML = points;
+}
+</script>
+</body>
+</html> 
